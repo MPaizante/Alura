@@ -27,22 +27,22 @@ var renato = {
     pontos:0
 }
 
-var elementoTabela = document.getElementById('tabelaJogadores')
+var elementoTabela = document.getElementById("tabelaJogadores");
 elementoTabela.innerHTML = `
     <tr>
-        <td>Paulo</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><button onClick="adicionarVitoria()">Vitória</button></td>
+        <td>${paulo.nome}</td>
+        <td>${paulo.vitoria}</td>
+        <td>${paulo.empate}</td>
+        <td>${paulo.derrota}</td>
+        <td>${paulo.pontos}</td>
+        <td><button onClick="adicionarVitoria(paulo)">Vitória</button></td>
         <td><button onClick="adicionarEmpate()">Empate</button></td>
         <td><button onClick="adicionarDerrota()">Derrota</button></td>
     </tr>
-`
+`;
 
-function adicionarVitoria(){
-
+function adicionarVitoria(jogador){
+    console.log(jogador)
 }
 function adicionarEmpate(){
     
