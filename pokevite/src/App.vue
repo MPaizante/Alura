@@ -3,17 +3,15 @@ import { onMounted, ref, computed, reactive } from 'vue';
 
 let nome = ref('Vue');
 
+let person = reactive({
+  name:'Joe',
+  age: 30
+
+})
 onMounted(()=>{
+  person.name = 'Matheus';
   nome.value = 'Vite';
 })
-let temperatura = ref(20);
-const verificaTemperatura = computed(()=>{
-  return temperatura.value >21 ? 'Tempreratura alta' : 'Temperatura baixa'
-})
-
-const verificaTemperaturaFunction= () =>{
-  return temperatura.value >21 ? 'Tempreratura alta' : 'Temperatura baixa'
-}
 </script>
 
 <template>
@@ -22,8 +20,9 @@ const verificaTemperaturaFunction= () =>{
         <p>{{ nome }}</p>
         <input type="text" v-model="nome">
         <hr>
-        <span>{{ verificaTemperatura }}</span>
-        <span>{{ verificaTemperaturaFunction }}</span>
+        <span>{{ person.name }}</span>
+        <br>
+        <span>{{ person.age }}</span>
 
     </div>
     
