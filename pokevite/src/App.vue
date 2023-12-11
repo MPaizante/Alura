@@ -1,29 +1,19 @@
 <script setup>
-import { onMounted, ref, computed, reactive } from 'vue';
-
-let nome = ref('Vue');
-
-let person = reactive({
-  name:'Joe',
-  age: 30
-
-})
-onMounted(()=>{
-  person.name = 'Matheus';
-  nome.value = 'Vite';
-})
+import { ref } from 'vue';
+const show = null;
+const nome = ref("Fulano");
+const x = [1, 2 , 3 , 4 , 5 , 6 ,7 ,8  , 9 , 10];
 </script>
 
 <template>
     <div class="col-6">
-        <h2>Composition</h2>
-        <p>{{ nome }}</p>
-        <input type="text" v-model="nome">
-        <hr>
-        <span>{{ person.name }}</span>
-        <br>
-        <span>{{ person.age }}</span>
+      <h2>Compositiron</h2>
 
+        <ul>
+          <li v-for="item in x" :key="'item'">
+            {{ item }}
+          </li>
+        </ul>
     </div>
     
 </template>
