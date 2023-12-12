@@ -1,22 +1,35 @@
 <script setup>
 import { ref } from 'vue';
-const show = null;
-const nome = ref("Fulano");
-const x = [1, 2 , 3 , 4 , 5 , 6 ,7 ,8  , 9 , 10];
+let num = ref (0);
+
+
 </script>
 
 <template>
-    <div class="col-6">
-      <h2>Compositiron</h2>
-
-        <ul>
-          <li v-for="item in x" :key="'item'">
-            {{ item }}
-          </li>
-        </ul>
+  <!--NAVBAR-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <router-link class="nav-link " aria-current="page" to="/" >NavBar</router-link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+           <router-link class="nav-link " aria-current="page" to="/" >Home</router-link>
+           
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link " aria-current="page" to="/about" >About</router-link>
+        </li>
+        
+      </ul>
     </div>
-    
-</template>
+  </div>
+</nav>
 
-<style>
-</style>
+<!--CONTENT-->
+<div class="main">
+  <router-view></router-view>  
+</div>
+</template>
