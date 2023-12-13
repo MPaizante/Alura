@@ -1,5 +1,5 @@
 <script setup>
-
+const pokemon = defineProps(["name"])
 </script>
 
 
@@ -7,7 +7,7 @@
     <div>
         <div class="card">
             <p>
-                nome
+                {{ pokemon.name }}
             </p>
         
         </div>

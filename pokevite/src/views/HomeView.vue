@@ -35,7 +35,7 @@ onMounted(() => {
 
         <div class="col-sm-12 col-md-6">
           <div class="card" style="width: 18rem">
-            <ListPokemon v-for="pokemon in pokemons" :key="pokemon.name" :pokemonName = "pokemon.name">
+            <ListPokemon v-for="pokemon in pokemons" :key="pokemon.name" :name = "pokemon.name">
             
             </ListPokemon>
           </div>
