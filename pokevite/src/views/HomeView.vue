@@ -1,6 +1,8 @@
 <script setup>
 import { onMounted, reactive, ref } from "vue";
 
+import ListPokemon from "@/components/ListPokemon.vue";
+
 let pokemons = reactive(ref());
 
 onMounted(() => {
@@ -33,13 +35,9 @@ onMounted(() => {
 
         <div class="col-sm-12 col-md-6">
           <div class="card" style="width: 18rem">
-            <ul>
-              <li v-for="pokemon in pokemons" :key="pokemon.name">
-
-                {{ pokemon.name }}
-                
-              </li>
-            </ul>
+            <ListPokemon v-for="pokemon in pokemons" :key="pokemon.name" :pokemonName = "pokemon.name">
+            
+            </ListPokemon>
           </div>
         </div>
       </div>
